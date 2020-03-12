@@ -19,7 +19,12 @@ class BMCustomizationManager: NSObject {
         
     var imageContext: CIContext = CIContext()
     
-    var initialImage: UIImage?
+    var initialImage: UIImage? {
+        didSet {
+            filteredImage = nil
+            allFilters.removeAll()
+        }
+    }
     var filteredImage: UIImage?
     var editedCategory: BMCustomizationCategory = .effects
     var allFilters = [BMCustomizationCategory: BMFilter]()
@@ -52,19 +57,23 @@ class BMCustomizationManager: NSObject {
             
             var processedImage: CIImage = CIImage(cgImage: cgImage)
 
+//            let additionalLayerCustomizations = customizations.filter({ $0.parentType == .stickers })
+
+//            let integratedCustomizations = customizations.filter({ $0.parentType != .stickers })
+
             customizations.forEach { (customization) in
                 if let customizedImage = customization.applied(to: processedImage) {
                     processedImage = customizedImage
                 }
             }
             
-            guard let cgImg = self.imageContext.createCGImage(processedImage, from: processedImage.extent)
+            guard let cgRenderedImg = self.imageContext.createCGImage(processedImage, from: processedImage.extent)
                 else {
                     completionMainThread(with: nil)
                     return
             }
-                
-            let renderedImage = UIImage(cgImage: cgImg)
+
+            let renderedImage = UIImage(cgImage: cgRenderedImg, scale: image.scale, orientation: image.imageOrientation)
             completionMainThread(with: renderedImage)
         }
     }

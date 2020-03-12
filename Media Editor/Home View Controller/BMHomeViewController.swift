@@ -43,7 +43,7 @@ var isNewSticker: Bool = false
 
 let kStickersDefaultSize: CGFloat = 60
 
-class BMHomeViewController: UIViewController {
+class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
         
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var shadeBackground: UIView!
@@ -96,6 +96,16 @@ class BMHomeViewController: UIViewController {
         view.layoutSubviews()
     }
     
+    func mediaToEditHasUpdate() {
+     
+        guard let imageSize = BMCustomizationManager.shared.initialImage?.size,
+            imageSize.width != 0
+            else { return }
+
+        let currentRatio = imageSize.height / imageSize.width
+        mediaRenderedHeightConstraint.constant = mediaRenderedImageView.frame.size.width * currentRatio
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -138,16 +148,20 @@ class BMHomeViewController: UIViewController {
     }
 }
 
-extension BMHomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension BMHomeViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         picker.dismiss(animated: true, completion: nil)
         
-        if let image = info[. originalImage] as? UIImage {
-            BMCustomizationManager.shared.initialImage = image
-            self.mediaRenderedImageView.image = image
+        if let image = info[. originalImage] as? UIImage,
+            let simplifiedImage = image.fixedOrientation() {
+            
+            BMCustomizationManager.shared.initialImage = simplifiedImage
+            self.mediaRenderedImageView.image = simplifiedImage
+            self.stickersWhiteBoardView.subviews.forEach({ $0.removeFromSuperview() })
+            self.mediaToEditHasUpdate()
         }
     }
 }

@@ -57,7 +57,7 @@ extension BMHomeViewController {
             return
         }
 
-        let stickersLayer = stickersWhiteBoardView.asImage()
+        let stickersLayer = stickersWhiteBoardView.asImage(outputSize: filteredImage.size)
         
         let customization = BMStickerFilter(choices: [BMStickerCustomization(stickersLayer)])
         
