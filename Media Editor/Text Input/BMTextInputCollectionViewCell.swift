@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// A collection view cell representing a text item
 class BMTextInputCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var textLabel: UILabel!

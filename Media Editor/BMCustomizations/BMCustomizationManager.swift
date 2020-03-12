@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Handle Application of filters and customizations
 class BMCustomizationManager: NSObject {
     
     static let _instance  = BMCustomizationManager()

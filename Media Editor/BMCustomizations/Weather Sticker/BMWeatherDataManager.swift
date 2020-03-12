@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 
+/// This class fetch and retrieve Geolocation coordinated then weather data from an api.
 class BMWeatherDataManager: NSObject {
     
     static let _instance = BMWeatherDataManager()

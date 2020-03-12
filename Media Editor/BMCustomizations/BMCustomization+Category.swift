@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Configuration of the Customization Interface
 enum BMCustomizationType {
     case style,
     intensity,

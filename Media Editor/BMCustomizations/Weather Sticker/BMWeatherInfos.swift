@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// A type representing weather informations for the sticker.
 struct BMWeatherInfos {
     
     var weatherName: String

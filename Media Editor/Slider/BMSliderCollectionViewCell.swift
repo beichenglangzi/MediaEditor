@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// A collection view cell representing a slider item (e.g. Contrast)
 class BMSliderCollectionViewCell: UICollectionViewCell, BMPreparableCollectionViewCell {
     
     @IBOutlet weak var minValueLabel: UILabel!

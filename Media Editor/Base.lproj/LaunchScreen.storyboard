@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +12,48 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wL6-LN-vNG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AC-Bd-fpq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayscale_logo" translatesAutoresizingMaskIntoConstraints="NO" id="yZj-R5-fjI">
+                                <rect key="frame" x="157" y="683" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="2dh-12-fVD"/>
+                                    <constraint firstAttribute="width" constant="100" id="LeF-PF-2rx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTf-yi-AAF" userLabel="Media Editor Powered by Baptiste Montagliani">
+                                <rect key="frame" x="114.5" y="803" width="185" height="29"/>
+                                <string key="text">Media Editor
+Powered by Baptiste Montagliani</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8AC-Bd-fpq" secondAttribute="trailing" id="3fo-CJ-Qz8"/>
+                            <constraint firstItem="wL6-LN-vNG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Dxk-5a-VEX"/>
+                            <constraint firstItem="wL6-LN-vNG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Geh-B6-jh6"/>
+                            <constraint firstItem="yZj-R5-fjI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Idb-WR-tIf"/>
+                            <constraint firstItem="8AC-Bd-fpq" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="SGh-RL-OB2"/>
+                            <constraint firstItem="xTf-yi-AAF" firstAttribute="centerX" secondItem="yZj-R5-fjI" secondAttribute="centerX" id="rXA-bA-yp9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xTf-yi-AAF" secondAttribute="bottom" constant="30" id="ra7-1r-Rb6"/>
+                            <constraint firstItem="8AC-Bd-fpq" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="rfl-fe-YqE"/>
+                            <constraint firstItem="xTf-yi-AAF" firstAttribute="top" secondItem="yZj-R5-fjI" secondAttribute="bottom" constant="20" id="sqw-TO-pAe"/>
+                            <constraint firstAttribute="bottom" secondItem="8AC-Bd-fpq" secondAttribute="bottom" id="t5n-X3-hUA"/>
+                            <constraint firstAttribute="bottom" secondItem="wL6-LN-vNG" secondAttribute="bottom" id="v3a-ff-hyf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wL6-LN-vNG" secondAttribute="trailing" id="voK-Ft-gD4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +62,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1192" height="600"/>
+        <image name="grayscale_logo" width="512" height="512"/>
+    </resources>
 </document>

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// A View representing the sticker
 class BMWeatherSticker: UIView, NibLoadable {
     
     var contentView: UIView!

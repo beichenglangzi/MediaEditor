@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+let kStickersDefaultSize: CGFloat = 60
+var isNewSticker: Bool = false
+
 class BMStickerCustomization: BMCustomization {
            
     var image: UIImage

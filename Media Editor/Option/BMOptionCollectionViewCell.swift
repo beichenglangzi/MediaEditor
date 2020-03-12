@@ -15,6 +15,7 @@ protocol BMPreparableCollectionViewCell {
     var delegate: BMCustomizationDelegate? { get set }
 }
 
+/// A collection view cell representing a selectable option item (e.g. Colors)
 class BMOptionCollectionViewCell: UICollectionViewCell, BMPreparableCollectionViewCell {
 
     @IBOutlet weak var optionImageView: UIImageView!

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// A collection view cell representing a category item (e.g. "Adjust" or "Effects")
 class BMCategoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryImageView: UIImageView!

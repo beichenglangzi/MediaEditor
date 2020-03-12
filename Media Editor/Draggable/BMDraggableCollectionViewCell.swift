@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// A collection view cell representing a draggable item (e.g. Stickers)
 class BMDraggableCollectionViewCell: UICollectionViewCell, BMPreparableCollectionViewCell {
         
     @IBOutlet weak var imageView: UIImageView!

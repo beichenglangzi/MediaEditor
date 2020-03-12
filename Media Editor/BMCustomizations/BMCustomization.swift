@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Definition of a customization (e.g. Sepia Filter)
 protocol BMCustomization {
     
     var displayStyle: BMDisplayStyle { get }
@@ -18,6 +19,12 @@ protocol BMCustomization {
     var ciValue: Any { get }
     
     var name: String? { get }
+}
+
+protocol BMCustomizationDelegate: NSObjectProtocol {
+    
+    func customizationUpdate(_ choice: BMCustomization,
+                             for type: BMCustomizationType)
 }
 
 class BMNoneCustomization: BMCustomization {
@@ -39,6 +46,7 @@ class BMNoneCustomization: BMCustomization {
     }
 }
 
+/// Used to manage display of items with the collectionview
 enum BMDisplayStyle {
     case option,
     slider,

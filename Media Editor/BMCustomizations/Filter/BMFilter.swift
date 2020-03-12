@@ -9,19 +9,23 @@
 import Foundation
 import UIKit
 
+/// Represents an object that handle filters and customizations
 protocol BMFilter {
     
+    /// Category of customization
     var parentType: BMCustomizationCategory { get }
     
-    var preview: UIImage { get }
-    var filter: CIFilter { get }
-    
+    /// If true, this filter is configured as a default filter
     var emptyFilter: Bool { get set }
     
+    /// update customizations to current filter
     func add(choice: BMCustomization)
+    
+    // Render the image with current filter customizations
     func applied(to image: CIImage) -> CIImage?
 }
 
+/// Filter that render Colors customization
 class BMColorFilter: BMFilter {
     
     static let requiredKeys = [kCIInputColorKey, kCIInputIntensityKey]
@@ -32,6 +36,13 @@ class BMColorFilter: BMFilter {
     
     var emptyFilter: Bool = false
     
+    init(choices: [BMCustomization]) {
+
+        choices.forEach({
+            add(choice: $0)
+        })
+    }
+
     func add(choice: BMCustomization) {
 
         if choice is BMNoneCustomization {
@@ -53,26 +64,11 @@ class BMColorFilter: BMFilter {
 
         choices[choice.coreImageKey] = choice.ciValue
     }
-  
-    init(choices: [BMCustomization]) {
-
-        choices.forEach({
-            add(choice: $0)
-        })
-    }
     
     var parentType: BMCustomizationCategory {
         return .filters
     }
-    
-    var preview: UIImage {
-        UIImage()
-    }
-    
-    var filter: CIFilter {
-        return CIFilter.init()
-    }
-    
+        
     func applied(to image: CIImage) -> CIImage? {
 
         guard !emptyFilter
@@ -89,6 +85,7 @@ class BMColorFilter: BMFilter {
     }
 }
 
+/// Filter that render Stickers customization
 class BMStickerFilter: BMFilter {
     
     static let requiredKeys = [kCIInputImageKey]
@@ -97,6 +94,13 @@ class BMStickerFilter: BMFilter {
     
     var emptyFilter: Bool = false
     
+    init(choices: [BMCustomization]) {
+
+        choices.forEach({
+            add(choice: $0)
+        })
+    }
+
     func add(choice: BMCustomization) {
 
         if choice is BMNoneCustomization {
@@ -108,26 +112,11 @@ class BMStickerFilter: BMFilter {
 
         choices[kCIInputImageKey] = choice.ciValue
     }
-  
-    init(choices: [BMCustomization]) {
-
-        choices.forEach({
-            add(choice: $0)
-        })
-    }
-    
+      
     var parentType: BMCustomizationCategory {
         return .stickers
     }
-    
-    var preview: UIImage {
-        UIImage()
-    }
-    
-    var filter: CIFilter {
-        return CIFilter.init()
-    }
-    
+        
     func applied(to image: CIImage) -> CIImage? {
 
         var parameters = choices
@@ -140,6 +129,7 @@ class BMStickerFilter: BMFilter {
     }
 }
 
+/// Filter that render Effects customization
 class BMEffectsFilter: BMFilter {
     
     static let requiredKeys = ["__EFFECT_NAME__"]
@@ -148,6 +138,13 @@ class BMEffectsFilter: BMFilter {
 
     var emptyFilter: Bool = false
     
+    init(choices: [BMCustomization]) {
+
+        choices.forEach({
+            add(choice: $0)
+        })
+    }
+
     func add(choice: BMCustomization) {
 
         if choice is BMNoneCustomization {
@@ -159,26 +156,11 @@ class BMEffectsFilter: BMFilter {
 
         ciEffectName = choice.ciValue as? String
     }
-  
-    init(choices: [BMCustomization]) {
-
-        choices.forEach({
-            add(choice: $0)
-        })
-    }
-    
+      
     var parentType: BMCustomizationCategory {
         return .filters
     }
-    
-    var preview: UIImage {
-        UIImage()
-    }
-    
-    var filter: CIFilter {
-        return CIFilter.init()
-    }
-    
+      
     func applied(to image: CIImage) -> CIImage? {
 
         guard let ciEffectName = ciEffectName,
@@ -192,6 +174,7 @@ class BMEffectsFilter: BMFilter {
     }
 }
 
+/// Filter that render Adjustment customization (Brightness, Contrast etc)
 class BMAdjustmentFilter: BMFilter {
     
     static let requiredKeys = [kCIInputSaturationKey,
@@ -202,6 +185,13 @@ class BMAdjustmentFilter: BMFilter {
     
     var emptyFilter: Bool = false
     
+    init(choices: [BMCustomization]) {
+
+        choices.forEach({
+            add(choice: $0)
+        })
+    }
+
     func add(choice: BMCustomization) {
 
         if choice is BMNoneCustomization {
@@ -213,26 +203,11 @@ class BMAdjustmentFilter: BMFilter {
 
         choices[choice.coreImageKey] = choice.ciValue
     }
-  
-    init(choices: [BMCustomization]) {
-
-        choices.forEach({
-            add(choice: $0)
-        })
-    }
-    
+      
     var parentType: BMCustomizationCategory {
         return .filters
     }
-    
-    var preview: UIImage {
-        UIImage()
-    }
-    
-    var filter: CIFilter {
-        return CIFilter.init()
-    }
-    
+        
     func applied(to image: CIImage) -> CIImage? {
 
         guard !emptyFilter

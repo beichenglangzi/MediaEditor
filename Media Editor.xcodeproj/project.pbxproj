@@ -11,6 +11,9 @@
 		F4217663241A72BA00807105 /* BMWeatherInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217662241A72BA00807105 /* BMWeatherInfos.swift */; };
 		F4217665241A74E100807105 /* BMWeatherSticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217664241A74E100807105 /* BMWeatherSticker.swift */; };
 		F4217669241A75B300807105 /* BMWeatherSticker.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4217668241A75B300807105 /* BMWeatherSticker.xib */; };
+		F421766B241A8F5600807105 /* BMHomeViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421766A241A8F5600807105 /* BMHomeViewController+Delegate.swift */; };
+		F421766D241A8F7F00807105 /* BMHomeViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F421766C241A8F7F00807105 /* BMHomeViewController+ImagePicker.swift */; };
+		F4217672241A928300807105 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217671241A928200807105 /* SceneDelegate.swift */; };
 		F43E9A52241832E2006597F6 /* BMCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E9A51241832E2006597F6 /* BMCustomization.swift */; };
 		F43E9A542418364E006597F6 /* BMCustomizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E9A532418364E006597F6 /* BMCustomizationManager.swift */; };
 		F43E9A5624183A4B006597F6 /* BMBottomView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E9A5524183A4B006597F6 /* BMBottomView+DataSource.swift */; };
@@ -31,7 +34,6 @@
 		F483C6FB2417C63A008421FE /* BMSliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483C6FA2417C63A008421FE /* BMSliderCollectionViewCell.swift */; };
 		F483C6FD2417C952008421FE /* BMCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483C6FC2417C952008421FE /* BMCategoryCollectionViewCell.swift */; };
 		F498A5DD2415624D0028E5D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498A5DC2415624D0028E5D3 /* AppDelegate.swift */; };
-		F498A5DF2415624D0028E5D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498A5DE2415624D0028E5D3 /* SceneDelegate.swift */; };
 		F498A5E42415624D0028E5D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F498A5E22415624D0028E5D3 /* Main.storyboard */; };
 		F498A5E62415624F0028E5D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F498A5E52415624F0028E5D3 /* Assets.xcassets */; };
 		F498A5E92415624F0028E5D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F498A5E72415624F0028E5D3 /* LaunchScreen.storyboard */; };
@@ -57,6 +59,9 @@
 		F4217662241A72BA00807105 /* BMWeatherInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMWeatherInfos.swift; sourceTree = "<group>"; };
 		F4217664241A74E100807105 /* BMWeatherSticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMWeatherSticker.swift; sourceTree = "<group>"; };
 		F4217668241A75B300807105 /* BMWeatherSticker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMWeatherSticker.xib; sourceTree = "<group>"; };
+		F421766A241A8F5600807105 /* BMHomeViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMHomeViewController+Delegate.swift"; sourceTree = "<group>"; };
+		F421766C241A8F7F00807105 /* BMHomeViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMHomeViewController+ImagePicker.swift"; sourceTree = "<group>"; };
+		F4217671241A928200807105 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F43E9A51241832E2006597F6 /* BMCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMCustomization.swift; sourceTree = "<group>"; };
 		F43E9A532418364E006597F6 /* BMCustomizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMCustomizationManager.swift; sourceTree = "<group>"; };
 		F43E9A5524183A4B006597F6 /* BMBottomView+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMBottomView+DataSource.swift"; sourceTree = "<group>"; };
@@ -78,7 +83,6 @@
 		F483C6FC2417C952008421FE /* BMCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		F498A5D92415624D0028E5D3 /* Media Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Media Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F498A5DC2415624D0028E5D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F498A5DE2415624D0028E5D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F498A5E32415624D0028E5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F498A5E52415624F0028E5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F498A5E82415624F0028E5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,35 @@
 				E508C8F0AC9CEDDFD04C56AB /* Pods-Media Editor.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F421766E241A8FAB00807105 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F466367D241A671B0041D2DD /* BMNetworkManager.swift */,
+				F466367E241A671B0041D2DD /* BMServiceManager.swift */,
+				F4663681241A67860041D2DD /* BMRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F421766F241A8FB400807105 /* Weather Sticker */ = {
+			isa = PBXGroup;
+			children = (
+				F466367B241A62FE0041D2DD /* BMWeatherDataManager.swift */,
+				F4217662241A72BA00807105 /* BMWeatherInfos.swift */,
+				F4217664241A74E100807105 /* BMWeatherSticker.swift */,
+				F4217668241A75B300807105 /* BMWeatherSticker.xib */,
+			);
+			path = "Weather Sticker";
+			sourceTree = "<group>";
+		};
+		F4217670241A8FE700807105 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				F4C87A3C2419436000514E6B /* BMFilter.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		F43E9A6124187253006597F6 /* Draggable */ = {
@@ -187,28 +220,19 @@
 		F498A5DB2415624D0028E5D3 /* Media Editor */ = {
 			isa = PBXGroup;
 			children = (
-				F466367D241A671B0041D2DD /* BMNetworkManager.swift */,
-				F466367E241A671B0041D2DD /* BMServiceManager.swift */,
-				F4663681241A67860041D2DD /* BMRequest.swift */,
-				F466367B241A62FE0041D2DD /* BMWeatherDataManager.swift */,
-				F4217662241A72BA00807105 /* BMWeatherInfos.swift */,
-				F4217664241A74E100807105 /* BMWeatherSticker.swift */,
-				F4217668241A75B300807105 /* BMWeatherSticker.xib */,
 				F498A5DC2415624D0028E5D3 /* AppDelegate.swift */,
-				F498A5DE2415624D0028E5D3 /* SceneDelegate.swift */,
+				F4217671241A928200807105 /* SceneDelegate.swift */,
 				F498A5E22415624D0028E5D3 /* Main.storyboard */,
 				F4C87A3B241941EF00514E6B /* Extensions */,
 				F4C87A39241941D200514E6B /* Home View Controller */,
-				F43E9A532418364E006597F6 /* BMCustomizationManager.swift */,
-				F4C87A3C2419436000514E6B /* BMFilter.swift */,
-				F4C87A482419484800514E6B /* BMCustomizations */,
 				F4C87A3A241941E400514E6B /* Bottom View */,
+				F421766E241A8FAB00807105 /* Network */,
+				F4C87A482419484800514E6B /* BMCustomizations */,
 				F43E9A6124187253006597F6 /* Draggable */,
 				F46998252417ED2700C8AB87 /* Category */,
 				F469982B2417EEE600C8AB87 /* Text Input */,
 				F46998242417ED2100C8AB87 /* Option */,
 				F46998262417ED3600C8AB87 /* Slider */,
-				F498A5F824156FD10028E5D3 /* UIView+Nib.swift */,
 				F498A5E52415624F0028E5D3 /* Assets.xcassets */,
 				F498A5E72415624F0028E5D3 /* LaunchScreen.storyboard */,
 				F498A5EA2415624F0028E5D3 /* Info.plist */,
@@ -220,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				F498A5F0241568190028E5D3 /* BMHomeViewController.swift */,
+				F421766C241A8F7F00807105 /* BMHomeViewController+ImagePicker.swift */,
+				F421766A241A8F5600807105 /* BMHomeViewController+Delegate.swift */,
 				F4C87A372419419900514E6B /* BMHomeViewController+UserActions.swift */,
 				F4C87A3524193F6200514E6B /* BMHomeViewController+DragDrop.swift */,
 			);
@@ -241,6 +267,7 @@
 		F4C87A3B241941EF00514E6B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F498A5F824156FD10028E5D3 /* UIView+Nib.swift */,
 				F43E9A5924183AD3006597F6 /* UIColor+Extensions.swift */,
 				F43E9A5B241861C3006597F6 /* UIImage+Circle.swift */,
 			);
@@ -250,12 +277,15 @@
 		F4C87A482419484800514E6B /* BMCustomizations */ = {
 			isa = PBXGroup;
 			children = (
+				F4217670241A8FE700807105 /* Filter */,
+				F43E9A532418364E006597F6 /* BMCustomizationManager.swift */,
 				F43E9A51241832E2006597F6 /* BMCustomization.swift */,
 				F4C87A462419457B00514E6B /* BMCustomization+Category.swift */,
 				F4C87A3E2419448100514E6B /* BMStickerCustomization.swift */,
 				F4C87A40241944B100514E6B /* BMEffectCustomization.swift */,
 				F4C87A42241944DF00514E6B /* BMColorCustomization.swift */,
 				F4C87A442419454B00514E6B /* BMIntensityCustomization.swift */,
+				F421766F241A8FB400807105 /* Weather Sticker */,
 			);
 			path = BMCustomizations;
 			sourceTree = "<group>";
@@ -406,9 +436,10 @@
 				F4C87A382419419A00514E6B /* BMHomeViewController+UserActions.swift in Sources */,
 				F4217665241A74E100807105 /* BMWeatherSticker.swift in Sources */,
 				F498A5DD2415624D0028E5D3 /* AppDelegate.swift in Sources */,
-				F498A5DF2415624D0028E5D3 /* SceneDelegate.swift in Sources */,
 				F483C6FD2417C952008421FE /* BMCategoryCollectionViewCell.swift in Sources */,
 				F498A5F32415689F0028E5D3 /* BMBottomView.swift in Sources */,
+				F421766D241A8F7F00807105 /* BMHomeViewController+ImagePicker.swift in Sources */,
+				F421766B241A8F5600807105 /* BMHomeViewController+Delegate.swift in Sources */,
 				F4C87A3624193F6200514E6B /* BMHomeViewController+DragDrop.swift in Sources */,
 				F43E9A5824183A6D006597F6 /* BMBottomView+Delegate.swift in Sources */,
 				F4C87A43241944DF00514E6B /* BMColorCustomization.swift in Sources */,
@@ -418,6 +449,7 @@
 				F483C6FB2417C63A008421FE /* BMSliderCollectionViewCell.swift in Sources */,
 				F4663682241A67860041D2DD /* BMRequest.swift in Sources */,
 				F43E9A5C241861C3006597F6 /* UIImage+Circle.swift in Sources */,
+				F4217672241A928300807105 /* SceneDelegate.swift in Sources */,
 				F4C87A452419454B00514E6B /* BMIntensityCustomization.swift in Sources */,
 				F46998282417ED7900C8AB87 /* BMTextInputCollectionViewCell.swift in Sources */,
 				F4217663241A72BA00807105 /* BMWeatherInfos.swift in Sources */,

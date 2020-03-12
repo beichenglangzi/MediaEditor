@@ -10,39 +10,6 @@ import Foundation
 import UIKit
 import Photos
 
-protocol BMCustomizationDelegate: NSObjectProtocol {
-    
-    func customizationUpdate(_ choice: BMCustomization,
-                             for type: BMCustomizationType)
-}
-
-extension BMHomeViewController: BMBottomViewDelegate {
-   
-    func customizationUpdate(_ customization: BMFilter,
-                             for category: BMCustomizationCategory) {
-        
-        BMCustomizationManager.shared.allFilters[category] = customization
-        
-        let allFilters = BMCustomizationManager.shared.allFilters.map { $1 }
-        
-        guard let img = BMCustomizationManager.shared.initialImage
-            else { return }
-        
-        BMCustomizationManager.shared.render(image: img, with: allFilters) { (image) in
-            BMCustomizationManager.shared.filteredImage = image
-            self.mediaRenderedImageView.image = image
-        }
-    }
-    
-    func dismissBottomView(animated: Bool = true) {
-        showEditMenu(false, animated: animated)
-    }
-}
-
-var isNewSticker: Bool = false
-
-let kStickersDefaultSize: CGFloat = 60
-
 class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
         
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -75,7 +42,21 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+                        
+        prepareUI()
+        prepareInteraction()
+        prepareWeather()
+    }
+    
+    func prepareInteraction() {
+     
+        let dropInteraction = UIDropInteraction(delegate: self)
+        stickersWhiteBoardView.addInteraction(dropInteraction)
+        stickersWhiteBoardView.isUserInteractionEnabled = true
+    }
+    
+    func prepareUI() {
+        
         let w = chooseMediaButton.frame.size.width
         chooseMediaButton.layer.cornerRadius = w / 2
         chooseMediaButton.layer.masksToBounds = true
@@ -93,12 +74,11 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
 
         bottomView.delegate = self
         
-        let dropInteraction = UIDropInteraction(delegate: self)
-        stickersWhiteBoardView.addInteraction(dropInteraction)
-        stickersWhiteBoardView.isUserInteractionEnabled = true
-        
         mediaRenderedHeightConstraint.constant = mediaRenderedImageView.frame.size.width * mediaRenderedImageView.image!.size.height / mediaRenderedImageView.image!.size.width
-        
+    }
+    
+    func prepareWeather() {
+     
         weatherManager.startUpdatingLocation()
         weatherManager.onWeatherUpdate = { infos in
             if let infos = infos {
@@ -162,23 +142,5 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
         activityViewController.popoverPresentationController?.sourceView = self.view
 
         self.present(activityViewController, animated: true, completion: nil)
-    }
-}
-
-extension BMHomeViewController: UIImagePickerControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        picker.dismiss(animated: true, completion: nil)
-        
-        if let image = info[. originalImage] as? UIImage,
-            let simplifiedImage = image.fixedOrientation() {
-            
-            BMCustomizationManager.shared.initialImage = simplifiedImage
-            self.mediaRenderedImageView.image = simplifiedImage
-            self.stickersWhiteBoardView.subviews.forEach({ $0.removeFromSuperview() })
-            self.mediaToEditHasUpdate()
-        }
     }
 }
