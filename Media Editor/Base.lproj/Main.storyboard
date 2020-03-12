@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="BMHomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="BMHomeViewController" customModule="Media_Editor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="L45-a6-S52">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyW-CF-Qsn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7w9-Vv-DDF">
+                                <rect key="frame" x="20" y="104" width="374" height="310"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="E22-uc-ahq">
+                                <rect key="frame" x="35" y="124" width="344" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="FUV-Ma-hgz"/>
+                                </constraints>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUS-LS-7or">
+                                <rect key="frame" x="35" y="124" width="344" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zgj-Wj-17O">
+                                <rect key="frame" x="62" y="464" width="290" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4A-ke-FXa">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="X6x-4m-yQC"/>
+                                            <constraint firstAttribute="width" secondItem="O4A-ke-FXa" secondAttribute="height" id="gF1-cP-Vl1"/>
+                                        </constraints>
+                                        <state key="normal" image="camera" catalog="system"/>
+                                        <connections>
+                                            <action selector="newMediaAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOq-91-EKn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1p-cc-nag">
+                                        <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="photo.on.rectangle" catalog="system"/>
+                                        <connections>
+                                            <action selector="chooseMediaFromLibraryAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1v-bh-ybU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee6-vo-d2K">
+                                        <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="pencil.and.outline" catalog="system"/>
+                                        <connections>
+                                            <action selector="editMediaAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="2o2-Ov-O1f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X47-it-jE7">
+                                        <rect key="frame" x="240" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                        <connections>
+                                            <action selector="shareAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWY-kB-1Jd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ee6-vo-d2K" firstAttribute="width" secondItem="s1p-cc-nag" secondAttribute="width" id="Hd5-9B-Zkd"/>
+                                    <constraint firstItem="s1p-cc-nag" firstAttribute="width" secondItem="O4A-ke-FXa" secondAttribute="width" id="acB-ZN-gwx"/>
+                                    <constraint firstItem="X47-it-jE7" firstAttribute="width" secondItem="ee6-vo-d2K" secondAttribute="width" id="bb4-w5-jGF"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x62-VD-PAK" customClass="BMBottomView" customModule="Media_Editor" customModuleProvider="target">
+                                <rect key="frame" x="20" y="512" width="374" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="s0F-Mp-3uP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QyW-CF-Qsn" secondAttribute="trailing" id="4nt-mJ-hJY"/>
+                            <constraint firstAttribute="bottom" secondItem="QyW-CF-Qsn" secondAttribute="bottom" id="93h-Cq-7fz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x62-VD-PAK" secondAttribute="bottom" id="BHJ-bZ-I7l"/>
+                            <constraint firstItem="x62-VD-PAK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BuM-LB-dyW"/>
+                            <constraint firstItem="E22-uc-ahq" firstAttribute="top" secondItem="7w9-Vv-DDF" secondAttribute="top" constant="20" id="Euv-Z6-npw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x62-VD-PAK" secondAttribute="trailing" constant="20" id="Ff3-yo-um4"/>
+                            <constraint firstItem="L45-a6-S52" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GjH-uQ-epw"/>
+                            <constraint firstItem="oUS-LS-7or" firstAttribute="leading" secondItem="E22-uc-ahq" secondAttribute="leading" id="HBD-by-8dt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7w9-Vv-DDF" secondAttribute="trailing" constant="20" id="IFg-CL-Uua"/>
+                            <constraint firstItem="7w9-Vv-DDF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="LN1-el-eSB"/>
+                            <constraint firstItem="E22-uc-ahq" firstAttribute="leading" secondItem="7w9-Vv-DDF" secondAttribute="leading" constant="15" id="NkZ-4i-VK4"/>
+                            <constraint firstItem="7w9-Vv-DDF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Prs-aj-WaS"/>
+                            <constraint firstItem="oUS-LS-7or" firstAttribute="bottom" secondItem="E22-uc-ahq" secondAttribute="bottom" id="PuK-dA-sLK"/>
+                            <constraint firstItem="QyW-CF-Qsn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SqO-wN-R3n"/>
+                            <constraint firstItem="zgj-Wj-17O" firstAttribute="top" secondItem="7w9-Vv-DDF" secondAttribute="bottom" constant="50" id="TA3-v6-kDv"/>
+                            <constraint firstItem="L45-a6-S52" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aV6-UK-Y4C"/>
+                            <constraint firstAttribute="bottom" secondItem="L45-a6-S52" secondAttribute="bottom" id="agN-Rk-xEK"/>
+                            <constraint firstItem="L45-a6-S52" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bWN-Wa-zVN"/>
+                            <constraint firstItem="E22-uc-ahq" firstAttribute="trailing" secondItem="7w9-Vv-DDF" secondAttribute="trailing" constant="-15" id="crJ-iR-TCw"/>
+                            <constraint firstItem="oUS-LS-7or" firstAttribute="top" secondItem="E22-uc-ahq" secondAttribute="top" id="jRV-oa-g6Y"/>
+                            <constraint firstItem="zgj-Wj-17O" firstAttribute="centerX" secondItem="L45-a6-S52" secondAttribute="centerX" id="mmT-t3-ewe"/>
+                            <constraint firstItem="oUS-LS-7or" firstAttribute="trailing" secondItem="E22-uc-ahq" secondAttribute="trailing" id="oeC-Gc-Aog"/>
+                            <constraint firstItem="QyW-CF-Qsn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xge-Pp-nOg"/>
+                            <constraint firstItem="E22-uc-ahq" firstAttribute="bottom" secondItem="7w9-Vv-DDF" secondAttribute="bottom" constant="-40" id="zNB-xJ-TJQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="L45-a6-S52" id="40z-sB-B6q"/>
+                        <outlet property="bottomView" destination="x62-VD-PAK" id="qUz-aY-9hp"/>
+                        <outlet property="bottomViewBottomLayout" destination="BHJ-bZ-I7l" id="zjJ-pO-UFs"/>
+                        <outlet property="chooseMediaButton" destination="s1p-cc-nag" id="XEr-Bq-GOk"/>
+                        <outlet property="editButton" destination="ee6-vo-d2K" id="7kY-VS-4xO"/>
+                        <outlet property="mediaBackView" destination="7w9-Vv-DDF" id="hLv-sJ-cLp"/>
+                        <outlet property="mediaBackViewLeadingConstraint" destination="Prs-aj-WaS" id="tAx-lz-uKR"/>
+                        <outlet property="mediaBackViewTrailingConstraint" destination="IFg-CL-Uua" id="jfR-HL-ELy"/>
+                        <outlet property="mediaRenderedHeightConstraint" destination="FUV-Ma-hgz" id="o8S-Qh-kmP"/>
+                        <outlet property="mediaRenderedImageView" destination="E22-uc-ahq" id="veb-ny-xND"/>
+                        <outlet property="newMediaButton" destination="O4A-ke-FXa" id="IQ0-Hg-3YN"/>
+                        <outlet property="shadeBackground" destination="QyW-CF-Qsn" id="Bpn-Be-Ehs"/>
+                        <outlet property="shareButton" destination="X47-it-jE7" id="jUG-LE-ifn"/>
+                        <outlet property="stickersWhiteBoardView" destination="oUS-LS-7or" id="tZp-IT-2GB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1192" height="600"/>
+        <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="pencil.and.outline" catalog="system" width="64" height="58"/>
+        <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
+</document>
