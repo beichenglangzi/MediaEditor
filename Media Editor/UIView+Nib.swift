@@ -30,10 +30,8 @@ extension NibLoadable where Self: UIView {
     func xibSetup() {
 
         backgroundColor = UIColor.clear
-//        contentView = loadNib()
-        // use bounds not frame or it'll be offset
+
         contentView.frame = bounds
-        // Adding custom subview on top of our view
         addSubview(contentView)
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,10 +39,7 @@ extension NibLoadable where Self: UIView {
                                                       options: [],
                                                       metrics: nil,
                                                       views: ["childView": contentView as Any]))
-        
-//        let c = NSLayoutConstraint.init(item: self, attribute: .height, relatedBy: .equal, toItem: contentView, attribute: .height, multiplier: 1, constant: 0)
-//        addConstraint(c)
-        
+                
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
                                                       options: [],
                                                       metrics: nil,

@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		327D8F386A89D0DAAE605EA5 /* Pods_Media_Editor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E005F070E47AED21AC6B6F8 /* Pods_Media_Editor.framework */; };
+		F4217663241A72BA00807105 /* BMWeatherInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217662241A72BA00807105 /* BMWeatherInfos.swift */; };
+		F4217665241A74E100807105 /* BMWeatherSticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217664241A74E100807105 /* BMWeatherSticker.swift */; };
+		F4217669241A75B300807105 /* BMWeatherSticker.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4217668241A75B300807105 /* BMWeatherSticker.xib */; };
 		F43E9A52241832E2006597F6 /* BMCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E9A51241832E2006597F6 /* BMCustomization.swift */; };
 		F43E9A542418364E006597F6 /* BMCustomizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E9A532418364E006597F6 /* BMCustomizationManager.swift */; };
 		F43E9A5624183A4B006597F6 /* BMBottomView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E9A5524183A4B006597F6 /* BMBottomView+DataSource.swift */; };
@@ -15,6 +19,10 @@
 		F43E9A5C241861C3006597F6 /* UIImage+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E9A5B241861C3006597F6 /* UIImage+Circle.swift */; };
 		F43E9A5E24187163006597F6 /* BMDraggableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E9A5D24187163006597F6 /* BMDraggableCollectionViewCell.swift */; };
 		F43E9A6024187229006597F6 /* BMDraggableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43E9A5F24187229006597F6 /* BMDraggableCollectionViewCell.xib */; };
+		F466367C241A62FE0041D2DD /* BMWeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466367B241A62FE0041D2DD /* BMWeatherDataManager.swift */; };
+		F466367F241A671C0041D2DD /* BMServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466367E241A671B0041D2DD /* BMServiceManager.swift */; };
+		F4663680241A671C0041D2DD /* BMNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F466367D241A671B0041D2DD /* BMNetworkManager.swift */; };
+		F4663682241A67860041D2DD /* BMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4663681241A67860041D2DD /* BMRequest.swift */; };
 		F46998282417ED7900C8AB87 /* BMTextInputCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46998272417ED7900C8AB87 /* BMTextInputCollectionViewCell.swift */; };
 		F469982A2417ED9500C8AB87 /* BMTextInputCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46998292417ED9500C8AB87 /* BMTextInputCollectionViewCell.xib */; };
 		F46D336C2419AB0300B3B1AD /* BMBottomView+Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D336B2419AB0300B3B1AD /* BMBottomView+Drag.swift */; };
@@ -44,6 +52,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E005F070E47AED21AC6B6F8 /* Pods_Media_Editor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Media_Editor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E508C8F0AC9CEDDFD04C56AB /* Pods-Media Editor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media Editor.release.xcconfig"; path = "Target Support Files/Pods-Media Editor/Pods-Media Editor.release.xcconfig"; sourceTree = "<group>"; };
+		F4217662241A72BA00807105 /* BMWeatherInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMWeatherInfos.swift; sourceTree = "<group>"; };
+		F4217664241A74E100807105 /* BMWeatherSticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMWeatherSticker.swift; sourceTree = "<group>"; };
+		F4217668241A75B300807105 /* BMWeatherSticker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMWeatherSticker.xib; sourceTree = "<group>"; };
 		F43E9A51241832E2006597F6 /* BMCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMCustomization.swift; sourceTree = "<group>"; };
 		F43E9A532418364E006597F6 /* BMCustomizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMCustomizationManager.swift; sourceTree = "<group>"; };
 		F43E9A5524183A4B006597F6 /* BMBottomView+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMBottomView+DataSource.swift"; sourceTree = "<group>"; };
@@ -52,6 +65,10 @@
 		F43E9A5B241861C3006597F6 /* UIImage+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Circle.swift"; sourceTree = "<group>"; };
 		F43E9A5D24187163006597F6 /* BMDraggableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMDraggableCollectionViewCell.swift; sourceTree = "<group>"; };
 		F43E9A5F24187229006597F6 /* BMDraggableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMDraggableCollectionViewCell.xib; sourceTree = "<group>"; };
+		F466367B241A62FE0041D2DD /* BMWeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMWeatherDataManager.swift; sourceTree = "<group>"; };
+		F466367D241A671B0041D2DD /* BMNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMNetworkManager.swift; sourceTree = "<group>"; };
+		F466367E241A671B0041D2DD /* BMServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMServiceManager.swift; sourceTree = "<group>"; };
+		F4663681241A67860041D2DD /* BMRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMRequest.swift; sourceTree = "<group>"; };
 		F46998272417ED7900C8AB87 /* BMTextInputCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMTextInputCollectionViewCell.swift; sourceTree = "<group>"; };
 		F46998292417ED9500C8AB87 /* BMTextInputCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMTextInputCollectionViewCell.xib; sourceTree = "<group>"; };
 		F46D336B2419AB0300B3B1AD /* BMBottomView+Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMBottomView+Drag.swift"; sourceTree = "<group>"; };
@@ -80,6 +97,7 @@
 		F4C87A42241944DF00514E6B /* BMColorCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMColorCustomization.swift; sourceTree = "<group>"; };
 		F4C87A442419454B00514E6B /* BMIntensityCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIntensityCustomization.swift; sourceTree = "<group>"; };
 		F4C87A462419457B00514E6B /* BMCustomization+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMCustomization+Category.swift"; sourceTree = "<group>"; };
+		F5C67B36925B626E8F68E943 /* Pods-Media Editor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media Editor.debug.xcconfig"; path = "Target Support Files/Pods-Media Editor/Pods-Media Editor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +105,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327D8F386A89D0DAAE605EA5 /* Pods_Media_Editor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C43B280104E6790A7EEB9391 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5C67B36925B626E8F68E943 /* Pods-Media Editor.debug.xcconfig */,
+				E508C8F0AC9CEDDFD04C56AB /* Pods-Media Editor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F43E9A6124187253006597F6 /* Draggable */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +171,8 @@
 			children = (
 				F498A5DB2415624D0028E5D3 /* Media Editor */,
 				F498A5DA2415624D0028E5D3 /* Products */,
+				C43B280104E6790A7EEB9391 /* Pods */,
+				F87ED5F53DBD022107E11D5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +187,13 @@
 		F498A5DB2415624D0028E5D3 /* Media Editor */ = {
 			isa = PBXGroup;
 			children = (
+				F466367D241A671B0041D2DD /* BMNetworkManager.swift */,
+				F466367E241A671B0041D2DD /* BMServiceManager.swift */,
+				F4663681241A67860041D2DD /* BMRequest.swift */,
+				F466367B241A62FE0041D2DD /* BMWeatherDataManager.swift */,
+				F4217662241A72BA00807105 /* BMWeatherInfos.swift */,
+				F4217664241A74E100807105 /* BMWeatherSticker.swift */,
+				F4217668241A75B300807105 /* BMWeatherSticker.xib */,
 				F498A5DC2415624D0028E5D3 /* AppDelegate.swift */,
 				F498A5DE2415624D0028E5D3 /* SceneDelegate.swift */,
 				F498A5E22415624D0028E5D3 /* Main.storyboard */,
@@ -223,6 +260,14 @@
 			path = BMCustomizations;
 			sourceTree = "<group>";
 		};
+		F87ED5F53DBD022107E11D5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E005F070E47AED21AC6B6F8 /* Pods_Media_Editor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F498A5ED2415624F0028E5D3 /* Build configuration list for PBXNativeTarget "Media Editor" */;
 			buildPhases = (
+				DE0014B95DA48C6C2DFB23B9 /* [CP] Check Pods Manifest.lock */,
 				F498A5D52415624D0028E5D3 /* Sources */,
 				F498A5D62415624D0028E5D3 /* Frameworks */,
 				F498A5D72415624D0028E5D3 /* Resources */,
+				89C956CD9210817800C7BE03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F498A5F5241568C70028E5D3 /* BMBottomView.xib in Resources */,
+				F4217669241A75B300807105 /* BMWeatherSticker.xib in Resources */,
 				F498A5FB241578800028E5D3 /* BMOptionCollectionViewCell.xib in Resources */,
 				F483C6F72417C329008421FE /* BMCategoryCollectionViewCell.xib in Resources */,
 				F483C6F92417C43E008421FE /* BMSliderCollectionViewCell.xib in Resources */,
@@ -295,22 +343,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89C956CD9210817800C7BE03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Media Editor/Pods-Media Editor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Media Editor/Pods-Media Editor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Media Editor/Pods-Media Editor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE0014B95DA48C6C2DFB23B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Media Editor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F498A5D52415624D0028E5D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F43E9A542418364E006597F6 /* BMCustomizationManager.swift in Sources */,
+				F466367C241A62FE0041D2DD /* BMWeatherDataManager.swift in Sources */,
 				F43E9A5624183A4B006597F6 /* BMBottomView+DataSource.swift in Sources */,
 				F4C87A472419457B00514E6B /* BMCustomization+Category.swift in Sources */,
 				F43E9A52241832E2006597F6 /* BMCustomization.swift in Sources */,
 				F4C87A3D2419436000514E6B /* BMFilter.swift in Sources */,
 				F4C87A3F2419448100514E6B /* BMStickerCustomization.swift in Sources */,
+				F4663680241A671C0041D2DD /* BMNetworkManager.swift in Sources */,
 				F498A5F724156F360028E5D3 /* BMOptionCollectionViewCell.swift in Sources */,
+				F466367F241A671C0041D2DD /* BMServiceManager.swift in Sources */,
 				F498A5F1241568190028E5D3 /* BMHomeViewController.swift in Sources */,
 				F43E9A5E24187163006597F6 /* BMDraggableCollectionViewCell.swift in Sources */,
 				F498A5F924156FD10028E5D3 /* UIView+Nib.swift in Sources */,
 				F4C87A382419419A00514E6B /* BMHomeViewController+UserActions.swift in Sources */,
+				F4217665241A74E100807105 /* BMWeatherSticker.swift in Sources */,
 				F498A5DD2415624D0028E5D3 /* AppDelegate.swift in Sources */,
 				F498A5DF2415624D0028E5D3 /* SceneDelegate.swift in Sources */,
 				F483C6FD2417C952008421FE /* BMCategoryCollectionViewCell.swift in Sources */,
@@ -322,9 +416,11 @@
 				F46D336C2419AB0300B3B1AD /* BMBottomView+Drag.swift in Sources */,
 				F43E9A5A24183AD4006597F6 /* UIColor+Extensions.swift in Sources */,
 				F483C6FB2417C63A008421FE /* BMSliderCollectionViewCell.swift in Sources */,
+				F4663682241A67860041D2DD /* BMRequest.swift in Sources */,
 				F43E9A5C241861C3006597F6 /* UIImage+Circle.swift in Sources */,
 				F4C87A452419454B00514E6B /* BMIntensityCustomization.swift in Sources */,
 				F46998282417ED7900C8AB87 /* BMTextInputCollectionViewCell.swift in Sources */,
+				F4217663241A72BA00807105 /* BMWeatherInfos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +562,7 @@
 		};
 		F498A5EE2415624F0028E5D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5C67B36925B626E8F68E943 /* Pods-Media Editor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +581,7 @@
 		};
 		F498A5EF2415624F0028E5D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E508C8F0AC9CEDDFD04C56AB /* Pods-Media Editor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

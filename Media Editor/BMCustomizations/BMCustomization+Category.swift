@@ -161,7 +161,8 @@ enum BMCustomizationCategory {
                     BMStickerCustomization(#imageLiteral(resourceName: "star")),
                     BMStickerCustomization(#imageLiteral(resourceName: "fun.png")),
                     BMStickerCustomization(#imageLiteral(resourceName: "medal-2")),
-                    BMStickerCustomization(#imageLiteral(resourceName: "toy"))
+                    BMStickerCustomization(#imageLiteral(resourceName: "toy")),
+                    BMWeatherStickerCustomization()                    
                 ]
             ]
         }

@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Media Editor need camera to take photos</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Media Editor will provide Weather infos. </string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save your photos to library</string>
 	<key>UIApplicationSceneManifest</key>

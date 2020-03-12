@@ -9,22 +9,6 @@
 import Foundation
 import UIKit
 
-protocol FKDisplayedItem {
-    
-    associatedtype T
-    
-    var selectedValue: T { get }
-    
-//    func prepare(with PackageItem)
-}
-
-extension BMSliderCollectionViewCell: FKDisplayedItem {
-    
-    var selectedValue: Float {
-        return slider?.value ?? 0
-    }
-}
-
 class BMSliderCollectionViewCell: UICollectionViewCell, BMPreparableCollectionViewCell {
     
     @IBOutlet weak var minValueLabel: UILabel!
@@ -38,6 +22,8 @@ class BMSliderCollectionViewCell: UICollectionViewCell, BMPreparableCollectionVi
     var intensity: BMIntensityCustomization?
     
     weak var delegate: BMCustomizationDelegate?
+    
+    var lastValue: Float = -1
     
     func prepare(with choice: BMCustomization) {
                 
@@ -59,14 +45,19 @@ class BMSliderCollectionViewCell: UICollectionViewCell, BMPreparableCollectionVi
     }
 
     @IBAction func sliderValueChanged() {
-        
-        guard let intensity = self.intensity
+
+        let interval: Float = 0.05
+        let newValue = interval * floor((slider.value / interval) + 0.005)
+        slider.setValue(newValue, animated: false)
+
+        guard let intensity = self.intensity,
+            lastValue != newValue
             else { return }
         
-        intensity.currentIntensity = slider.value
+        lastValue = newValue
         
+        intensity.currentIntensity = slider.value
         currentValueLabel.text = String(format: "%0.2f", intensity.currentIntensity)
-
         delegate?.customizationUpdate(intensity, for: intensity.relatedType)
     }
     
@@ -77,6 +68,6 @@ class BMSliderCollectionViewCell: UICollectionViewCell, BMPreparableCollectionVi
         
         minValueLabel.text = nil
         maxValueLabel.text = nil
-//        currentValueLabel.text = nil
+        currentValueLabel.text = nil
     }
 }

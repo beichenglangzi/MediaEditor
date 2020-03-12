@@ -56,6 +56,8 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
         
+    @IBOutlet weak var weatherView: UIView!
+    
     @IBOutlet weak var bottomViewBottomLayout: NSLayoutConstraint!
     
     @IBOutlet weak var mediaBackViewLeadingConstraint: NSLayoutConstraint!
@@ -68,6 +70,8 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
     static let identifier: String = "BMHomeViewController"
 
     var bottomViewIsHidden: Bool = true
+    
+    var weatherManager = BMWeatherDataManager.default
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +99,15 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
         
         mediaRenderedHeightConstraint.constant = mediaRenderedImageView.frame.size.width * mediaRenderedImageView.image!.size.height / mediaRenderedImageView.image!.size.width
         
-        view.layoutSubviews()
+        weatherManager.startUpdatingLocation()
+        weatherManager.onWeatherUpdate = { infos in
+            if let infos = infos {
+                self.weatherView.subviews.forEach({ $0.removeFromSuperview() })
+                let stv = infos.generateStickerView()
+                self.weatherView.addSubview(stv)
+                self.weatherManager.weatherForLastLocation?.stickerImage = stv.asImage()
+            }
+        }
     }
     
     func mediaToEditHasUpdate() {

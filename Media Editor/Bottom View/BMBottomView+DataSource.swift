@@ -43,8 +43,6 @@ extension BMBottomView: UICollectionViewDataSource {
         }
         
         let displayStyle = selectedCustomizationCategory.customizationOptions[indexPath.section].displayStyle
-////        return selectedCustomizationCategory.customizationChoices(for: option).count
-
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: displayStyle.cellId, for: indexPath)
 

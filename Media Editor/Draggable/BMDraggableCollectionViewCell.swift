@@ -17,16 +17,20 @@ class BMDraggableCollectionViewCell: UICollectionViewCell, BMPreparableCollectio
     
     var delegate: BMCustomizationDelegate?
 
+    var stview: UIView?
+    
     func prepare(with choice: BMCustomization) {
         
         if let sticker = choice as? BMStickerCustomization {
             imageView.image = sticker.image
-        }
+        }        
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
         
         self.imageView.image = nil
+        stview?.removeFromSuperview()
+        stview = nil
     }
 }

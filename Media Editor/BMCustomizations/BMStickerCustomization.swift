@@ -12,7 +12,7 @@ import UIKit
 class BMStickerCustomization: BMCustomization {
            
     var image: UIImage
-    
+
     init(_ image: UIImage) {
         self.image = image
     }
@@ -31,5 +31,13 @@ class BMStickerCustomization: BMCustomization {
     
     var ciValue: Any {
         return CIImage(image: image) as Any
+    }
+}
+
+class BMWeatherStickerCustomization: BMStickerCustomization {
+    
+    init() {
+        let stc = BMWeatherDataManager.default.weatherForLastLocation?.stickerImage
+        super.init(stc ?? #imageLiteral(resourceName: "02d"))
     }
 }

@@ -29,12 +29,7 @@ class BMCategoryCollectionViewCell: UICollectionViewCell {
         layer.masksToBounds = true
         
         layer.borderWidth = 1
-        layer.borderColor = UIColor.lightGray.cgColor
-        
-//        layer.shadowColor = UIColor.gray.cgColor
-//        layer.shadowOpacity = 0.3
-//        layer.shadowRadius = 5
-//        layer.masksToBounds = false
+        layer.borderColor = UIColor.lightGray.cgColor        
     }
     
     func prepare(with category: BMCustomizationCategory) {

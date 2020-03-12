@@ -80,6 +80,17 @@ extension UIImage {
 
 extension UIView {
 
+    func asImage() -> UIImage {
+
+        let format = UIGraphicsImageRendererFormat()
+        format.opaque = false
+        let renderer = UIGraphicsImageRenderer(bounds: bounds, format: format)
+
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
+    }
+    
     func asImage(outputSize: CGSize) -> UIImage {
         
         let scaleW = outputSize.width / bounds.width
@@ -89,6 +100,7 @@ extension UIView {
         
         let format = UIGraphicsImageRendererFormat()
         format.scale = scale
+        format.opaque = false
         let bds = CGRect.init(origin: CGPoint.init(x: (renderingScaledSize.width - bounds.width) / 2, y: (renderingScaledSize.height - bounds.height) / 2), size: bounds.size)
         
         let renderer = UIGraphicsImageRenderer(bounds: bds, format: format)

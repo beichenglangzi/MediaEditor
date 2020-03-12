@@ -15,16 +15,7 @@ extension BMHomeViewController {
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             showPicker(sourceType: .photoLibrary)
-        }
-        
-//            imagePicker.imageExportPreset = .compatible
-
-//            if sourceType == .camera {
-//                imagePicker.cameraDevice = .front
-//                imagePicker.cameraCaptureMode = .photo
-//            }
-
-        
+        }        
     }
     
     @IBAction func newMediaAction() {

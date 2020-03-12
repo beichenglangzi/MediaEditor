@@ -8,51 +8,6 @@
 
 import UIKit
 
-enum inputType {
-    
-    case category,
-    colorPicker,
-    optionSelector,
-    slider
-    
-    
-    
-}
-
-protocol inputableItem {
-    
-    var parentInputType: inputType { get }
-}
-
-struct ColorInputableItem: inputableItem {
-    
-    enum attrs {
-        case color
-    }
-    
-    var parentInputType: inputType { return .colorPicker }
-    
-    var attributes = [attrs: AnyObject]()
-
-    func getInputData() -> UIColor? {
-        return attributes[.color] as? UIColor
-    }
-}
-
-protocol InputableType {}
-
-struct ColorInputSelector {
-    
-    typealias InputType = InputableType
-    
-    var items: [ColorInputableItem]
-    
-    var itemSelectedIndex: Int
-    
-//    var itemSelected
-}
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
