@@ -19,6 +19,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayscale_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rGd-DK-670">
+                                <rect key="frame" x="157" y="683" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1On-rr-chF"/>
+                                    <constraint firstAttribute="height" constant="100" id="ya0-N7-2Od"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pva-3B-SBm" userLabel="Media Editor Powered by Baptiste Montagliani">
+                                <rect key="frame" x="114.5" y="803" width="185" height="29"/>
+                                <string key="text">Media Editor
+Powered by Baptiste Montagliani</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyW-CF-Qsn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,8 +112,10 @@
                             <constraint firstAttribute="bottom" secondItem="QyW-CF-Qsn" secondAttribute="bottom" id="93h-Cq-7fz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x62-VD-PAK" secondAttribute="bottom" id="BHJ-bZ-I7l"/>
                             <constraint firstItem="x62-VD-PAK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BuM-LB-dyW"/>
+                            <constraint firstItem="rGd-DK-670" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EP2-10-Aqa"/>
                             <constraint firstItem="E22-uc-ahq" firstAttribute="top" secondItem="7w9-Vv-DDF" secondAttribute="top" constant="20" id="Euv-Z6-npw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x62-VD-PAK" secondAttribute="trailing" constant="20" id="Ff3-yo-um4"/>
+                            <constraint firstItem="pva-3B-SBm" firstAttribute="centerX" secondItem="rGd-DK-670" secondAttribute="centerX" id="GGU-o7-dix"/>
                             <constraint firstItem="L45-a6-S52" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GjH-uQ-epw"/>
                             <constraint firstItem="oUS-LS-7or" firstAttribute="leading" secondItem="E22-uc-ahq" secondAttribute="leading" id="HBD-by-8dt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7w9-Vv-DDF" secondAttribute="trailing" constant="20" id="IFg-CL-Uua"/>
@@ -108,13 +125,16 @@
                             <constraint firstItem="oUS-LS-7or" firstAttribute="bottom" secondItem="E22-uc-ahq" secondAttribute="bottom" id="PuK-dA-sLK"/>
                             <constraint firstItem="QyW-CF-Qsn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SqO-wN-R3n"/>
                             <constraint firstItem="zgj-Wj-17O" firstAttribute="top" secondItem="7w9-Vv-DDF" secondAttribute="bottom" constant="50" id="TA3-v6-kDv"/>
+                            <constraint firstItem="rGd-DK-670" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zgj-Wj-17O" secondAttribute="bottom" constant="70" id="X4Q-QM-QSI"/>
                             <constraint firstItem="L45-a6-S52" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aV6-UK-Y4C"/>
                             <constraint firstAttribute="bottom" secondItem="L45-a6-S52" secondAttribute="bottom" id="agN-Rk-xEK"/>
                             <constraint firstItem="L45-a6-S52" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bWN-Wa-zVN"/>
                             <constraint firstItem="E22-uc-ahq" firstAttribute="trailing" secondItem="7w9-Vv-DDF" secondAttribute="trailing" constant="-15" id="crJ-iR-TCw"/>
+                            <constraint firstItem="pva-3B-SBm" firstAttribute="top" secondItem="rGd-DK-670" secondAttribute="bottom" constant="20" id="e1d-zk-Ntr"/>
                             <constraint firstItem="oUS-LS-7or" firstAttribute="top" secondItem="E22-uc-ahq" secondAttribute="top" id="jRV-oa-g6Y"/>
                             <constraint firstItem="zgj-Wj-17O" firstAttribute="centerX" secondItem="L45-a6-S52" secondAttribute="centerX" id="mmT-t3-ewe"/>
                             <constraint firstItem="oUS-LS-7or" firstAttribute="trailing" secondItem="E22-uc-ahq" secondAttribute="trailing" id="oeC-Gc-Aog"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pva-3B-SBm" secondAttribute="bottom" constant="30" id="u9g-v6-qB9"/>
                             <constraint firstItem="QyW-CF-Qsn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xge-Pp-nOg"/>
                             <constraint firstItem="E22-uc-ahq" firstAttribute="bottom" secondItem="7w9-Vv-DDF" secondAttribute="bottom" constant="-40" id="zNB-xJ-TJQ"/>
                         </constraints>
@@ -145,6 +165,7 @@
     <resources>
         <image name="background" width="1192" height="600"/>
         <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="grayscale_logo" width="512" height="512"/>
         <image name="pencil.and.outline" catalog="system" width="64" height="58"/>
         <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>

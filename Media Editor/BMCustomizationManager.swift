@@ -57,10 +57,6 @@ class BMCustomizationManager: NSObject {
             
             var processedImage: CIImage = CIImage(cgImage: cgImage)
 
-//            let additionalLayerCustomizations = customizations.filter({ $0.parentType == .stickers })
-
-//            let integratedCustomizations = customizations.filter({ $0.parentType != .stickers })
-
             customizations.forEach { (customization) in
                 if let customizedImage = customization.applied(to: processedImage) {
                     processedImage = customizedImage

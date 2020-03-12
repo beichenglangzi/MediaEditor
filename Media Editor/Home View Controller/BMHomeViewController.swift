@@ -55,7 +55,7 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var newMediaButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
-    
+        
     @IBOutlet weak var bottomViewBottomLayout: NSLayoutConstraint!
     
     @IBOutlet weak var mediaBackViewLeadingConstraint: NSLayoutConstraint!
@@ -81,9 +81,11 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
         
         editButton.layer.cornerRadius = w / 2
         editButton.layer.masksToBounds = true
+        editButton.isEnabled = false
 
         shareButton.layer.cornerRadius = w / 2
         shareButton.layer.masksToBounds = true
+        shareButton.isEnabled = false
 
         bottomView.delegate = self
         
@@ -104,6 +106,9 @@ class BMHomeViewController: UIViewController, UINavigationControllerDelegate {
 
         let currentRatio = imageSize.height / imageSize.width
         mediaRenderedHeightConstraint.constant = mediaRenderedImageView.frame.size.width * currentRatio
+        
+        editButton.isEnabled = true
+        shareButton.isEnabled = true
     }
     
     override func viewDidLayoutSubviews() {
